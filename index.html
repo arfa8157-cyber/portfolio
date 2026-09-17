@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohamed Arafa | Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Mohamed Arafa, a Computer Science student focused on Full-Stack Web Development, responsive websites and modern web applications.">
+  <meta name="keywords" content="Mohamed Arafa, Full-Stack Developer, Web Developer, PHP, Laravel, JavaScript, TypeScript, React, MySQL, Portfolio">
+  <meta name="author" content="Mohamed Arafa">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mohamedarafa.dev/">
+  <meta property="og:title" content="Mohamed Arafa | Full-Stack Developer">
+  <meta property="og:description" content="Portfolio of Mohamed Arafa, a Computer Science student focused on Full-Stack Web Development, responsive websites and modern web applications.">
+  <meta property="og:image" content="assets/profile.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Mohamed Arafa | Full-Stack Developer">
+  <meta property="twitter:description" content="Portfolio of Mohamed Arafa, a Computer Science student focused on Full-Stack Web Development, responsive websites and modern web applications.">
+  <meta property="twitter:image" content="assets/profile.jpg">
+
+  <!-- Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Interactivity Script -->
+  <script src="dist/script.js" defer></script>
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       STICKY RESPONSIVE NAVBAR
+       ======================================================================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-container">
+      <a href="#home" class="logo" aria-label="Mohamed Arafa Homepage">
+        MOHAMED<span class="logo-dot">.</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="nav-desktop" aria-label="Primary Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-sm">Get In Touch</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="theme-icon theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path></svg>
+        <svg class="theme-icon theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+      </button>
+
+      <!-- Accessible Mobile Hamburger Button -->
+      <button 
+        class="mobile-nav-toggle" 
+        type="button" 
+        aria-expanded="false" 
+        aria-controls="mobileNavMenu" 
+        aria-label="Toggle navigation menu"
+        id="mobileMenuToggle"
+      >
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu & Overlay -->
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop" aria-hidden="true"></div>
+  <aside id="mobileNavMenu" class="mobile-nav-menu" aria-label="Primary Mobile Navigation" aria-hidden="true">
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get In Touch</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         1. HOME / HERO SECTION
+         ====================================================================== -->
+    <section id="home" class="hero-section" aria-label="Hero Introduction">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Column -->
+          <div class="hero-content reveal">
+            <!-- TypeScript-powered developer status badge -->
+            <div class="status-badge" role="status" aria-label="Availability Status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Available for Full-Stack Projects</span>
+            </div>
+
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1 class="hero-name">Mohamed Arafa</h1>
+            <h2 class="hero-title">Full-Stack Developer</h2>
+
+            <p class="hero-description">
+              I build modern, responsive and functional web applications while combining development with a creative eye for design.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" id="heroViewProjectsBtn">
+                View Projects
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary" id="heroGetInTouchBtn">
+                Get In Touch
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column (Profile Photo with Glow) -->
+          <div class="hero-image-wrapper reveal">
+            <div class="hero-backdrop-glow" aria-hidden="true"></div>
+            <div class="hero-image-container">
+              <img 
+                src="WhatsApp Image 2026-09-16 at 9.42.39 PM.jpeg" 
+                alt="Portrait of Mohamed Arafa, Full-Stack Developer" 
+                class="hero-image"
+                width="360"
+                height="360"
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. ABOUT SECTION
+         ====================================================================== -->
+    <section id="about" class="section" aria-labelledby="aboutHeading">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left Column: Workspace Image -->
+          <div class="about-image-card reveal">
+            <img 
+              src="assets/about.jpg" 
+              alt="Mohamed Arafa's developer workspace featuring dual monitors with code" 
+              class="about-image"
+              loading="lazy"
+              width="600"
+              height="450"
+            >
+          </div>
+
+          <!-- Right Column: Narrative & Statistics Cards -->
+          <div class="about-content reveal">
+            <span class="about-label">ABOUT ME</span>
+            <h2 id="aboutHeading" class="about-heading">Turning ideas into digital experiences.</h2>
+            <p class="about-paragraph">
+              I'm a Computer Science student focused on Full-Stack Web Development. I enjoy building complete web solutions, from responsive interfaces to backend systems and databases.
+            </p>
+
+            <!-- Statistics Cards -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">2+</div>
+                <div class="stat-label">Years Learning</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">10+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Technologies</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Learning Mindset</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. EDUCATION SECTION
+         ====================================================================== -->
+    <section id="education" class="section" aria-labelledby="educationHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academic Background</span>
+          <h2 id="educationHeading" class="section-title">Education</h2>
+          <p class="section-subtitle">Formal foundation in algorithms, databases, software engineering, and web development.</p>
+        </div>
+
+        <div class="education-wrapper reveal">
+          <div class="education-card">
+            <div class="education-header">
+              <div class="education-icon-box" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c0 2 4 3 6 3s6-1 6-3v-5"></path>
+                </svg>
+              </div>
+              <div class="education-titles">
+                <h3 class="education-institution">Zagazig University</h3>
+                <div class="education-faculty">
+                  Faculty of Science
+                  <span class="education-badge">Undergraduate</span>
+                </div>
+                <p class="education-department">Department of Computer Science</p>
+              </div>
+            </div>
+
+            <div class="education-divider" aria-hidden="true"></div>
+
+            <p class="education-description">
+              Studying computer science with a focus on programming, software development, databases, algorithms and web technologies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. SKILLS SECTION
+         ====================================================================== -->
+    <section id="skills" class="section" aria-labelledby="skillsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Technical Proficiency</span>
+          <h2 id="skillsHeading" class="section-title">Skills &amp; Technologies</h2>
+          <p class="section-subtitle">Core technologies and tools used to build robust frontend interfaces and scalable backend systems.</p>
+        </div>
+
+        <div class="skills-grid reveal">
+          <!-- 1. HTML5 -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m4 3 1.8 17.5 6.2 1.7 6.2-1.7L20 3H4z"></path><path d="M7.5 7.5h9"></path><path d="M8 11.5h8"></path><path d="m8.5 15.5 3.5 1 3.5-1"></path></svg>
+              </div>
+              <h3 class="skill-name">HTML5</h3>
+            </div>
+            <p class="skill-description">Semantic markup, accessibility (WCAG), SEO-optimized document structure, and modern standards.</p>
+          </article>
+
+          <!-- 2. CSS3 -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h20l-2 17-8 2.5-8-2.5L2 3z"></path><path d="m6 8 8 2-8 2 8 2"></path></svg>
+              </div>
+              <h3 class="skill-name">CSS3</h3>
+            </div>
+            <p class="skill-description">Modern layout with Flexbox &amp; Grid, CSS variables, glassmorphism, responsive design, and smooth transitions.</p>
+          </article>
+
+          <!-- 3. JavaScript -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8v8a2 2 0 0 1-2 2h-2"></path><path d="M8 8v8a2 2 0 0 0 2 2h2"></path></svg>
+              </div>
+              <h3 class="skill-name">JavaScript</h3>
+            </div>
+            <p class="skill-description">Modern ES6+, DOM manipulation, asynchronous programming (Promises, async/await), and event handling.</p>
+          </article>
+
+          <!-- 4. TypeScript -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16"></path><path d="M12 7v12"></path><path d="M17 19a3 3 0 0 0 3-3V7"></path></svg>
+              </div>
+              <h3 class="skill-name">TypeScript</h3>
+            </div>
+            <p class="skill-description">Static type safety, interfaces, strict compiler checking, and scalable application development.</p>
+          </article>
+
+          <!-- 5. PHP -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6z"></path></svg>
+              </div>
+              <h3 class="skill-name">PHP</h3>
+            </div>
+            <p class="skill-description">Server-side application logic, OOP design, session management, secure backend workflows, and templating.</p>
+          </article>
+
+          <!-- 6. Laravel -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 9 4.5v11L12 22l-9-4.5v-11L12 2z"></path><path d="M12 12 3 7.5"></path><path d="m12 12 9-4.5"></path><path d="M12 12v10"></path></svg>
+              </div>
+              <h3 class="skill-name">Laravel</h3>
+            </div>
+            <p class="skill-description">MVC architecture, Eloquent ORM, Blade, routing, authentication, migrations, and clean service layers.</p>
+          </article>
+
+          <!-- 7. React -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(30 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(90 12 12)"></ellipse><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(150 12 12)"></ellipse></svg>
+              </div>
+              <h3 class="skill-name">React</h3>
+            </div>
+            <p class="skill-description">Functional components, hooks, reusable UI elements, state management, and modern component architecture.</p>
+          </article>
+
+          <!-- 8. MySQL -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              </div>
+              <h3 class="skill-name">MySQL</h3>
+            </div>
+            <p class="skill-description">Relational schema design, queries, normalization, indexing, joins, and transactional database integrity.</p>
+          </article>
+
+          <!-- 9. REST APIs -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 9l3 3-3 3"></path><line x1="13" y1="15" x2="16" y2="15"></line><rect x="3" y="4" width="18" height="16" rx="2"></rect></svg>
+              </div>
+              <h3 class="skill-name">REST APIs</h3>
+            </div>
+            <p class="skill-description">Designing and consuming RESTful endpoints, JSON serialization, HTTP status conventions, and authentication.</p>
+          </article>
+
+          <!-- 10. Git -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="18" cy="6" r="3"></circle><path d="M6 9v12"></path><path d="M18 9v6"></path></svg>
+              </div>
+              <h3 class="skill-name">Git</h3>
+            </div>
+            <p class="skill-description">Distributed version control, branch management, merge conflict resolution, commits, and clean workflows.</p>
+          </article>
+
+          <!-- 11. GitHub -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <h3 class="skill-name">GitHub</h3>
+            </div>
+            <p class="skill-description">Remote repositories, collaborative pull requests, code reviews, issue tracking, and CI/CD basics.</p>
+          </article>
+
+          <!-- 12. Responsive Web Design -->
+          <article class="skill-card">
+            <div class="skill-card-top">
+              <div class="skill-icon-wrap" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+              </div>
+              <h3 class="skill-name">Responsive Web Design</h3>
+            </div>
+            <p class="skill-description">Fluid mobile-first layouts, flexible typography, media queries, touch friendliness, and cross-browser testing.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. PROJECTS SECTION (HORIZONTALLY SCROLLABLE SHOWCASE)
+         ====================================================================== -->
+    <section id="projects" class="section" aria-labelledby="projectsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Featured Works</span>
+          <h2 id="projectsHeading" class="section-title">Projects Showcase</h2>
+          <p class="section-subtitle">Real-world applications covering full-stack systems, interactive dashboards, and creative frontend interfaces.</p>
+        </div>
+
+        <div class="projects-showcase-container reveal">
+          <!-- Control Bar for Carousel -->
+          <div class="showcase-header-controls">
+            <div class="showcase-hint">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+              <span>Scroll horizontally or use arrow buttons to explore</span>
+            </div>
+            <div class="carousel-nav-buttons">
+              <button 
+                class="carousel-btn" 
+                id="prevProjectBtn" 
+                type="button" 
+                aria-label="Scroll projects left"
+                disabled
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"></path></svg>
+              </button>
+              <button 
+                class="carousel-btn" 
+                id="nextProjectBtn" 
+                type="button" 
+                aria-label="Scroll projects right"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"></path></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Horizontally Scrollable Projects Track -->
+          <div class="projects-track" id="projectsTrack" tabindex="0" role="region" aria-label="Projects carousel list">
+            <!-- Project 1 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Web Application</span>
+                <img 
+                  src="Screenshot 2026-09-17 114723.png" 
+                  alt="fan website and top alboum" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">fan website and top alboum</h3>
+                <p class="project-desc">website for amr diab fans and top albums in his carrer.</p>
+                <div class="project-tech">HTML · CSS · JavaScript</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://arfa8157-cyber.github.io/nn/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Full-Stack</span>
+                <img 
+                  src="Screenshot 2026-09-17 121626.png" 
+                  alt="Learning Platform curriculum and video player interface" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Learning Platform</h3>
+                <p class="project-desc">A platform for organizing courses, roadmaps and educational content.</p>
+                <div class="project-tech">PHP · Laravel · MySQL</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://roadmap-hub-pink.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Dashboard</span>
+                <img 
+                  src="screencapture-arfa8157-cyber-github-io-spider-2026-09-17-12_09_37.png" 
+                  alt="Business Dashboard showing real-time revenue and user analytics" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">new's website</h3>
+                <p class="project-desc">spider man series new's.</p>
+                <div class="project-tech">HTML · JavaScript · CSS</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://arfa8157-cyber.github.io/spider/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Frontend</span>
+                <img 
+                  src="assets/projects/project-4.jpg" 
+                  alt="Creative Portfolio UI showcase" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Creative Portfolio</h3>
+                <p class="project-desc">A responsive personal portfolio focused on modern UI and performance.</p>
+                <div class="project-tech">HTML · CSS · JavaScript</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 5 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Full-Stack</span>
+                <img 
+                  src="assets/projects/project-5.jpg" 
+                  alt="Booking System appointment scheduling interface" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Booking System</h3>
+                <p class="project-desc">A web application for managing appointments and customer bookings.</p>
+                <div class="project-tech">Laravel · MySQL · JavaScript</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 6 -->
+            <article class="project-card">
+              <div class="project-media">
+                <span class="project-category-badge">Web Application</span>
+                <img 
+                  src="assets/projects/project-6.jpg" 
+                  alt="Task Manager Kanban workflow interface" 
+                  class="project-image"
+                  loading="lazy"
+                  width="600"
+                  height="338"
+                >
+              </div>
+              <div class="project-body">
+                <h3 class="project-title">Task Manager</h3>
+                <p class="project-desc">A productivity application for organizing tasks and projects.</p>
+                <div class="project-tech">JavaScript · PHP · MySQL</div>
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-primary btn-sm">View Project</a>
+                  <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" aria-label="View source code on GitHub">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TESTIMONIALS SECTION (WITH TYPESCRIPT RATING INTERACTION)
+         ====================================================================== -->
+    <section id="testimonials" class="section" aria-labelledby="testimonialsHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Client Feedback</span>
+          <h2 id="testimonialsHeading" class="section-title">Testimonials</h2>
+          <p class="section-subtitle">What partners and clients say about delivery quality, communication, and technical execution.</p>
+        </div>
+
+        <div class="testimonial-wrapper reveal">
+          <div class="testimonial-card">
+            <span class="testimonial-demo-badge">DEMO TESTIMONIAL</span>
+
+            <!-- Rating Row with TypeScript Interaction -->
+            <div class="testimonial-rating-wrap">
+              <div class="stars-row" role="group" aria-label="Rating selection">
+                <button type="button" class="star-btn" data-rating="1" aria-label="Rate 1 star" aria-pressed="true">★</button>
+                <button type="button" class="star-btn" data-rating="2" aria-label="Rate 2 stars" aria-pressed="true">★</button>
+                <button type="button" class="star-btn" data-rating="3" aria-label="Rate 3 stars" aria-pressed="true">★</button>
+                <button type="button" class="star-btn" data-rating="4" aria-label="Rate 4 stars" aria-pressed="true">★</button>
+                <button type="button" class="star-btn" data-rating="5" aria-label="Rate 5 stars" aria-pressed="true">★</button>
+              </div>
+              <span id="ratingValueText" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--color-cyan);">5 / 5 Stars</span>
+            </div>
+
+            <!-- Screen reader accessible live region -->
+            <div id="ratingLiveAnnounce" class="sr-only" aria-live="polite" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+              Rated 5 out of 5 stars.
+            </div>
+
+            <div class="testimonial-quote-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 0 1-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z"></path>
+              </svg>
+            </div>
+
+            <blockquote class="testimonial-quote">
+              "Mohamed delivered a clean and functional website with strong attention to detail."
+            </blockquote>
+
+            <div class="testimonial-author">Client Name</div>
+            <div class="testimonial-role">Project Stakeholder / Client</div>
+
+            <!-- TypeScript dynamic rating button -->
+            <button type="button" class="rating-toggle-btn" id="changeRatingBtn" aria-label="Change testimonial rating">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+              <span>Change Rating</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. SERVICES SECTION
+         ====================================================================== -->
+    <section id="services" class="section" aria-labelledby="servicesHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Offerings</span>
+          <h2 id="servicesHeading" class="section-title">Services</h2>
+          <p class="section-subtitle">Specialized web development solutions designed to deliver real business value and high performance.</p>
+        </div>
+
+        <div class="services-grid reveal">
+          <!-- Service 1 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h4V6a2 2 0 0 0-2-2h-4v4"></path><path d="M14 18h-4v4h4a2 2 0 0 0 2-2v-2"></path><rect width="8" height="8" x="2" y="2" rx="2"></rect><rect width="8" height="8" x="14" y="14" rx="2"></rect></svg>
+            </div>
+            <h3 class="service-title">Full-Stack Development</h3>
+            <p class="service-description">Complete web applications from frontend to backend and database.</p>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="12" x="3" y="4" rx="2"></rect><path d="M2 20h20"></path></svg>
+            </div>
+            <h3 class="service-title">Responsive Websites</h3>
+            <p class="service-description">Modern websites optimized for desktop, tablet and mobile.</p>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+            </div>
+            <h3 class="service-title">Backend Development</h3>
+            <p class="service-description">Backend systems using PHP, Laravel, databases and APIs.</p>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6z"></path></svg>
+            </div>
+            <h3 class="service-title">UI Implementation</h3>
+            <p class="service-description">Turning designs into responsive and accessible interfaces.</p>
+          </article>
+
+          <!-- Service 5 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+            </div>
+            <h3 class="service-title">Website Maintenance</h3>
+            <p class="service-description">Bug fixes, updates and improvements after project delivery.</p>
+          </article>
+
+          <!-- Service 6 -->
+          <article class="service-card">
+            <div class="service-icon-box" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.563-2.512 5.563-5.563C22 6.5 17.5 2 12 2z"></path></svg>
+            </div>
+            <h3 class="service-title">Brand &amp; Visual Design</h3>
+            <p class="service-description">Logo, poster and basic visual design support for digital projects.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. GET IN TOUCH / CONTACT SECTION
+         ====================================================================== -->
+    <section id="contact" class="section" aria-labelledby="contactHeading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Direct Communication</span>
+          <h2 id="contactHeading" class="section-title">Let's Build Something Together.</h2>
+          <p class="section-subtitle">Have a project, idea or opportunity? Feel free to reach out.</p>
+        </div>
+
+        <div class="contact-wrapper reveal">
+          <div class="contact-grid">
+            <!-- Email -->
+            <a href="mailto:arfa8157@gmail.com" class="contact-card" aria-label="Send email to Mohamed Arafa">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              </div>
+              <h3 class="contact-label">Email</h3>
+              <p class="contact-value">arfa8157@gmail.com</p>
+              <span class="contact-action-text">
+                Send Message
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </span>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/mohamed-3-elsayed/" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Connect with Mohamed Arafa on LinkedIn">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              </div>
+              <h3 class="contact-label">LinkedIn</h3>
+              <p class="contact-value">mohamed arafa</p>
+              <span class="contact-action-text">
+                Connect
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </span>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/arfa8157-cyber" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Check Mohamed Arafa's repositories on GitHub">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              </div>
+              <h3 class="contact-label">GitHub</h3>
+              <p class="contact-value">arfa8157-cyber</p>
+              <span class="contact-action-text">
+                Follow
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </span>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+201030326785" class="contact-card" aria-label="Call Mohamed Arafa">
+              <div class="contact-icon-box" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <h3 class="contact-label">Phone</h3>
+              <p class="contact-value">+201030326785</p>
+              <span class="contact-action-text">
+                Call Directly
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       9. FOOTER
+       ======================================================================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="logo" aria-label="Back to Mohamed Arafa Home">
+            MOHAMED<span class="logo-dot">.</span>
+          </a>
+          <p class="footer-brand-p">
+            Full-Stack Developer crafting high-performance, modern, and accessible web experiences.
+          </p>
+        </div>
+
+        <nav aria-label="Footer Navigation">
+          <ul class="footer-nav">
+            <li><a href="#about" class="footer-link">About</a></li>
+            <li><a href="#education" class="footer-link">Education</a></li>
+            <li><a href="#skills" class="footer-link">Skills</a></li>
+            <li><a href="#projects" class="footer-link">Projects</a></li>
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Back To Top Button -->
+        <button type="button" class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top of page">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m18 15-6-6-6 6"></path></svg>
+        </button>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mohamed Arafa. All rights reserved.</p>
+        <p>Built with semantic HTML5, modern CSS3, and TypeScript.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

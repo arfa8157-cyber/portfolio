@@ -1,0 +1,23 @@
+{
+  "name": "mohamed-arafa-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Mohamed Arafa, Full-Stack Developer",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.0",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack",
+    "developer",
+    "typescript",
+    "responsive"
+  ],
+  "author": "Mohamed Arafa",
+  "license": "MIT"
+}
