@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initCardPointerEffects();
     initHeroParallax();
+    initCodeEnvironment();
     initBackToTop();
 });
 function initTheme() {
@@ -277,8 +278,12 @@ function initCardPointerEffects() {
                 return;
             frame = requestAnimationFrame(() => {
                 const bounds = card.getBoundingClientRect();
+                const tiltX = ((event.clientY - bounds.top) / bounds.height - 0.5) * -3;
+                const tiltY = ((event.clientX - bounds.left) / bounds.width - 0.5) * 3;
                 card.style.setProperty('--pointer-x', `${event.clientX - bounds.left}px`);
                 card.style.setProperty('--pointer-y', `${event.clientY - bounds.top}px`);
+                card.style.setProperty('--tilt-x', `${tiltX}deg`);
+                card.style.setProperty('--tilt-y', `${tiltY}deg`);
                 frame = 0;
             });
         });
@@ -287,6 +292,8 @@ function initCardPointerEffects() {
                 cancelAnimationFrame(frame);
             card.style.removeProperty('--pointer-x');
             card.style.removeProperty('--pointer-y');
+            card.style.removeProperty('--tilt-x');
+            card.style.removeProperty('--tilt-y');
             frame = 0;
         });
     });
@@ -312,6 +319,37 @@ function initHeroParallax() {
             cancelAnimationFrame(frame);
         hero.style.removeProperty('--parallax-x');
         hero.style.removeProperty('--parallax-y');
+        frame = 0;
+    });
+}
+function initCodeEnvironment() {
+    const hero = document.querySelector('.hero-section');
+    const environment = document.querySelector('.hero-code-environment');
+    if (!hero || !environment || !window.matchMedia('(hover: hover) and (pointer: fine)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches)
+        return;
+    const elements = Array.from(environment.querySelectorAll('.code-orbit, .code-node'));
+    let frame = 0;
+    hero.addEventListener('pointermove', (event) => {
+        if (frame)
+            return;
+        frame = requestAnimationFrame(() => {
+            const x = event.clientX / window.innerWidth - 0.5;
+            const y = event.clientY / window.innerHeight - 0.5;
+            elements.forEach((element) => {
+                const depth = Number(element.dataset.depth || '1');
+                element.style.setProperty('--mouse-x', `${x * depth * 18}px`);
+                element.style.setProperty('--mouse-y', `${y * depth * 18}px`);
+            });
+            frame = 0;
+        });
+    });
+    hero.addEventListener('pointerleave', () => {
+        if (frame)
+            cancelAnimationFrame(frame);
+        elements.forEach((element) => {
+            element.style.removeProperty('--mouse-x');
+            element.style.removeProperty('--mouse-y');
+        });
         frame = 0;
     });
 }
